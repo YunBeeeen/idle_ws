@@ -1,0 +1,7 @@
+episode_id,type,description,csv_path,label,notes
+static_hold_folded_001,static_hold,folded arm hold,contact_detection/real_logs/no_contact/20260618/static_hold_folded_001.csv,nc,last valid run; no human contact
+static_hold_forward_001,static_hold,forward extended hold,contact_detection/real_logs/no_contact/20260618/static_hold_forward_001.csv,nc,no human contact
+static_hold_side_001,static_hold,side extended hold,contact_detection/real_logs/no_contact/20260618/static_hold_side_001.csv,nc,no human contact
+static_hold_side_002,static_hold,side extended hold,contact_detection/real_logs/no_contact/20260618/static_hold_side_002.csv,nc,no human contact
+static_hold_side_003,static_hold,side extended hold,contact_detection/real_logs/no_contact/20260618/static_hold_side_003.csv,nc,no human contact
+static_hold_side_004,static_hold,side extended hold,contact_detection/real_logs/no_contact/20260618/static_hold_side_004.csv,nc,no human contact

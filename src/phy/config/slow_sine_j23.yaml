@@ -1,0 +1,30 @@
+joint_sweep_node:
+  ros__parameters:
+    control_hz: 250.0
+    state_timeout_s: 0.2
+
+    sine_motion_enabled: true
+    sine_duration_s: 24.0
+    sine_validation_duration_s: 30.0
+    sine_envelope_enabled: false
+    start_all_motors_at_zero: false
+    segment_duration_s: 6.0
+    initial_to_zero_duration_s: 4.0
+    repeat: false
+
+    sweep_kp: 6.0
+    sweep_kd: 0.7
+    hold_kp: 4.5
+    hold_kd: 0.5
+    use_tuning_gains: false
+
+    sine_motor_ids_json: [2, 3]
+    sine_center_by_motor_json: '{"2":-0.70,"3":-1.20}'
+    sine_amplitude_by_motor_json: '{"2":0.06,"3":0.08}'
+    sine_frequency_by_motor_json: '{"2":0.06,"3":0.08}'
+    sine_phase_by_motor_json: '{"2":0.0,"3":1.57079632679}'
+
+    check_self_collision: true
+    check_floor_clearance: false
+    check_gravity_load: true
+    gravity_load_limit_by_motor_json: '{"2":25.0,"3":11.0}'

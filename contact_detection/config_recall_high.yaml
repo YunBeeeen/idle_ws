@@ -1,0 +1,26 @@
+inherits: "config.yaml"
+
+# More aggressive recall-prioritized experiment.
+#
+# Use this when the main objective is to reduce missed contacts (FN), accepting
+# a higher false-positive rate if needed.  Results are written separately so
+# existing outputs and the moderate recall run are not overwritten.
+output_dir: "outputs_recall_high"
+
+training:
+  pos_weight_override: 10.0
+  threshold_selection_policy: "recall_constrained_f1"
+  target_recall: 0.95
+  fbeta_beta: 2.0
+  device: "auto"
+  batch_size: 256
+  epochs: 50
+  lr: 0.001
+  hidden_dim: 64
+  num_layers: 1
+  dropout: 0.1
+  early_stopping_patience: 8
+  early_stopping_warmup_epochs: 5
+  threshold_search_points: 240
+  gru_decision_threshold: null
+  num_workers: 0

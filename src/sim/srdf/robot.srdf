@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot name="my_robot">
+  <!--
+    Self-collision pair exclusions for collision.py.
+    Kinematically adjacent (parent-child in URDF tree) or always-touching-by-
+    construction pairs are excluded so geometric checks don't false-positive.
+
+    Regenerate "Adjacent" pairs from the URDF tree whenever joints change:
+      python3 src/phy/scripts/home_collision_sweep.py --dump-adjacent
+    Refine "Never" pairs: run a check at a known-good open pose; any reported
+    collision there is a construction overlap -> add below with reason="Never".
+  -->
+
+  <!-- Cage is the fixed world root; cage↔base is directly adjacent,
+       cage↔rs02_1 is one fixed joint away but kinematically invariant. -->
+  <disable_collisions link1="cage"     link2="base"     reason="Adjacent"/>
+  <disable_collisions link1="cage"     link2="rs02_1"   reason="Never"/>
+
+  <!-- Adjacent kinematic chain (parent -> child in URDF tree) -->
+  <disable_collisions link1="base"     link2="rs02_1"   reason="Adjacent"/>
+  <disable_collisions link1="rs02_1"   link2="joint1"   reason="Adjacent"/>
+  <disable_collisions link1="joint1"   link2="rs03"     reason="Adjacent"/>
+  <disable_collisions link1="rs03"     link2="link1_1"  reason="Adjacent"/>
+  <disable_collisions link1="link1_1"  link2="link1_2"  reason="Adjacent"/>
+  <disable_collisions link1="link1_2"  link2="link1_3"  reason="Adjacent"/>
+  <disable_collisions link1="link1_3"  link2="rs02_2"   reason="Adjacent"/>
+  <disable_collisions link1="rs02_2"   link2="link2_1"  reason="Adjacent"/>
+  <disable_collisions link1="link2_1"  link2="link2_2"  reason="Adjacent"/>
+  <disable_collisions link1="link2_2"  link2="link2_3"  reason="Adjacent"/>
+  <disable_collisions link1="link2_3"  link2="rs02_3"   reason="Adjacent"/>
+  <disable_collisions link1="rs02_3"   link2="link3_1"  reason="Adjacent"/>
+  <disable_collisions link1="link3_1"  link2="rs00_1"   reason="Adjacent"/>
+  <disable_collisions link1="rs00_1"   link2="link3_2"  reason="Adjacent"/>
+  <disable_collisions link1="link3_2"  link2="rs00_2"   reason="Adjacent"/>
+  <disable_collisions link1="rs00_2"   link2="link3_3"  reason="Adjacent"/>
+  <disable_collisions link1="link3_3"  link2="rs05"     reason="Adjacent"/>
+  <disable_collisions link1="rs05"     link2="gripper"  reason="Adjacent"/>
+  <disable_collisions link1="gripper"  link2="finger_r" reason="Adjacent"/>
+  <disable_collisions link1="gripper"  link2="finger_l" reason="Adjacent"/>
+
+  <!-- Gripper fingers move together (crank-slider driven), never collide -->
+  <disable_collisions link1="finger_r" link2="finger_l" reason="ParallelMimic"/>
+
+  <!-- "Never" construction-overlap pairs: re-derive from a known-good open pose.
+       Old connect_00/connect_05/case pairs removed (those links no longer exist). -->
+</robot>

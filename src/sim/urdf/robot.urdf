@@ -1,0 +1,501 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="my_robot_with_cage">
+  <link name="cage">
+    <inertial>
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="0.177000" ixy="0.000000" ixz="0.000000" iyy="0.177000" iyz="0.000000" izz="0.187000" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://sim/meshes/Cage.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://sim/meshes/Cage.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="base">
+    <inertial>
+      <origin xyz="-0.000002481630 0.000000483416 0.035385988818" rpy="0 0 0" />
+      <mass value="0.685513" />
+      <inertia ixx="0.002363000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.002295000000" iyz="0.000000000000" izz="0.003326000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/base.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/base.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs02_1">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.018300000000" rpy="0 0 0" />
+      <mass value="0.411618" />
+      <inertia ixx="0.000201" ixy="0.000000" ixz="0.000000" iyy="0.000200" iyz="0.000000" izz="0.000287" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs02_2">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.018300000000" rpy="0 0 0" />
+      <mass value="0.411618" />
+      <inertia ixx="0.000201" ixy="0.000000" ixz="0.000000" iyy="0.000200" iyz="0.000000" izz="0.000287" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs02_3">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.018300000000" rpy="0 0 0" />
+      <mass value="0.411618" />
+      <inertia ixx="0.000201" ixy="0.000000" ixz="0.000000" iyy="0.000200" iyz="0.000000" izz="0.000287" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS02(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs03">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.021500000000" rpy="0 0 0" />
+      <mass value="0.924357" />
+      <inertia ixx="0.000880" ixy="-0.000001" ixz="-0.000007" iyy="0.000920" iyz="-0.000001" izz="0.001201" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS03(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS03(0.0.0).stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs00_1">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.020800000000" rpy="0 0 0" />
+      <mass value="0.311841" />
+      <inertia ixx="0.000130" ixy="0.000000" ixz="0.000000" iyy="0.000129" iyz="0.000000" izz="0.000127" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS00.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS00.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs00_2">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.020800000000" rpy="0 0 0" />
+      <mass value="0.311841" />
+      <inertia ixx="0.000130" ixy="0.000000" ixz="0.000000" iyy="0.000129" iyz="0.000000" izz="0.000127" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS00.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS00.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rs05">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 -0.018300000000" rpy="0 0 0" />
+      <mass value="0.191090" />
+      <inertia ixx="0.000082" ixy="0.000000" ixz="0.000000" iyy="0.000082" iyz="0.000000" izz="0.000068" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS05.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/RS05.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="joint1">
+    <inertial>
+      <origin xyz="0.005674051863 0.000004286091 -0.057303043346" rpy="0 0 0" />
+      <mass value="0.431305" />
+      <inertia ixx="0.001623000000" ixy="0.000000000000" ixz="-0.000147000000" iyy="0.001247000000" iyz="0.000000000000" izz="0.001062000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/joint1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/joint1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1_1">
+    <inertial>
+      <origin xyz="0.000000023649 0.022463093246 -0.044901219300" rpy="0 0 0" />
+      <mass value="0.350100" />
+      <inertia ixx="0.000685000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000466000000" iyz="0.000123000000" izz="0.000710000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1_2">
+    <inertial>
+      <origin xyz="0.000001692897 -0.000002036842 0.150000000000" rpy="0 0 0" />
+      <mass value="0.502204" />
+      <inertia ixx="0.003839000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.003839000000" iyz="0.000000000000" izz="0.000146000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1_3">
+    <inertial>
+      <origin xyz="-0.000000247094 0.013972966263 0.024671979261" rpy="0 0 0" />
+      <mass value="0.322751" />
+      <inertia ixx="0.000782" ixy="-0.000000" ixz="0.000000" iyy="0.000825" iyz="-0.000146" izz="0.000565" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link1_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link2_1">
+    <inertial>
+      <origin xyz="0.000292828584 -0.016532981001 -0.058100411057" rpy="0 0 0" />
+      <mass value="0.697618" />
+      <inertia ixx="0.001532" ixy="0.000011" ixz="0.000003" iyy="0.001240" iyz="-0.000252" izz="0.001364" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link2_2">
+    <inertial>
+      <origin xyz="0.000000000000 0.000000000000 0.115000000000" rpy="0 0 0" />
+      <mass value="0.154772" />
+      <inertia ixx="0.000690000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000690000000" iyz="0.000000000000" izz="0.000048000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link2_3">
+    <inertial>
+      <origin xyz="0.000706986549 -0.016567090147 0.016764480768" rpy="0 0 0" />
+      <mass value="0.288847" />
+      <inertia ixx="0.000594" ixy="-0.000003" ixz="0.000008" iyy="0.000616" iyz="0.000166" izz="0.000463" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link2_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3_1">
+    <inertial>
+      <origin xyz="-0.000000154781 0.022689723837 -0.040161124828" rpy="0 0 0" />
+      <mass value="0.264011" />
+      <inertia ixx="0.000540000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000493000000" iyz="0.000101000000" izz="0.000580000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3_2">
+    <inertial>
+      <origin xyz="-0.000001870544 0.023210308078 -0.045745385269" rpy="0 0 0" />
+      <mass value="0.259261" />
+      <inertia ixx="0.000535000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000491000000" iyz="0.000098000000" izz="0.000579000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3_3">
+    <inertial>
+      <origin xyz="-0.000000287070 0.001356284705 -0.050392020362" rpy="0 0 0" />
+      <mass value="0.202651" />
+      <inertia ixx="0.000305000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000348000000" iyz="-0.000010000000" izz="0.000343000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/link3_3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="gripper">
+    <inertial>
+      <origin xyz="-0.000001543486 -0.000002896980 -0.012058477856" rpy="0 0 0" />
+      <mass value="0.090928" />
+      <inertia ixx="0.000134000000" ixy="0.000006000000" ixz="0.000000000000" iyy="0.000013000000" iyz="0.000000000000" izz="0.000138000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/gripper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/gripper.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="finger_r">
+    <inertial>
+      <origin xyz="0.000927864812 0.006622883789 -0.011071668038" rpy="0 0 0" />
+      <mass value="0.030964" />
+      <inertia ixx="0.000011000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000012000000" iyz="0.000003000000" izz="0.000006000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/finger_r.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/finger_r.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="finger_l">
+    <inertial>
+      <origin xyz="-0.000922783846 -0.006622999429 -0.011071668038" rpy="0 0 0" />
+      <mass value="0.030964" />
+      <inertia ixx="0.000011000000" ixy="0.000000000000" ixz="0.000000000000" iyy="0.000012000000" iyz="-0.000003000000" izz="0.000006000000" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://sim/meshes/finger_l.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://sim/meshes/finger_l.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cage_to_base" type="fixed">
+    <parent link="cage" />
+    <child link="base" />
+    <origin xyz="0 0 0.03" rpy="0 0 0" />
+  </joint>
+  <joint name="m1" type="fixed">
+    <parent link="base" />
+    <child link="rs02_1" />
+    <origin xyz="0 0 0.1002" rpy="0 0 1.570796" />
+  </joint>
+  <joint name="j1" type="revolute">
+    <parent link="rs02_1" />
+    <child link="joint1" />
+    <origin xyz="0 0 0" rpy="3.14159 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="100" />
+  </joint>
+  <joint name="m2" type="fixed">
+    <parent link="joint1" />
+    <child link="rs03" />
+    <origin xyz="-0.0362 0 -0.0893" rpy="1.5708 0 -1.5708" />
+  </joint>
+  <joint name="j2" type="revolute">
+    <parent link="rs03" />
+    <child link="link1_1" />
+    <origin xyz="0 0 0" rpy="3.1415926 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.78" upper="1.78" effort="50" velocity="100" />
+  </joint>
+  <joint name="j2_2" type="fixed">
+    <parent link="link1_1" />
+    <child link="link1_2" />
+    <origin xyz="0 0.05 -0.05715" rpy="-1.5708 0 0" />
+  </joint>
+  <joint name="j2_3" type="fixed">
+    <parent link="link1_2" />
+    <child link="link1_3" />
+    <origin xyz="0 0 0.3" rpy="0 0 3.1415926" />
+  </joint>
+  <joint name="m3" type="fixed">
+    <parent link="link1_3" />
+    <child link="rs02_2" />
+    <origin xyz="0 0.06735 0.050" rpy="-1.5708 0 0" />
+  </joint>
+  <joint name="j3" type="revolute">
+    <parent link="rs02_2" />
+    <child link="link2_1" />
+    <origin xyz="0 0 0" rpy="3.1415926 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="100" />
+  </joint>
+  <joint name="j3_2" type="fixed">
+    <parent link="link2_1" />
+    <child link="link2_2" />
+    <origin xyz="0 -0.050 -0.07465" rpy="1.5708 0 0" />
+  </joint>
+  <joint name="j3_3" type="fixed">
+    <parent link="link2_2" />
+    <child link="link2_3" />
+    <origin xyz="0 0 0.23" rpy="0 0 0" />
+  </joint>
+  <joint name="m4" type="fixed">
+    <parent link="link2_3" />
+    <child link="rs02_3" />
+    <origin xyz="0 -0.06585 0.05" rpy="1.5708 0 0" />
+  </joint>
+  <joint name="j4" type="revolute">
+    <parent link="rs02_3" />
+    <child link="link3_1" />
+    <origin xyz="0 0 0" rpy="0 3.14159 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="100" />
+  </joint>
+  <joint name="m5" type="fixed">
+    <parent link="link3_1" />
+    <child link="rs00_1" />
+    <origin xyz="0 0.0724 -0.053" rpy="-1.5708 0 0" />
+  </joint>
+  <joint name="j5" type="revolute">
+    <parent link="rs00_1" />
+    <child link="link3_2" />
+    <origin xyz="0 0 0" rpy="0 3.14159 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="100" />
+  </joint>
+  <joint name="m6" type="fixed">
+    <parent link="link3_2" />
+    <child link="rs00_2" />
+    <origin xyz="0 0.0724 -0.058" rpy="-1.5708 0 0" />
+  </joint>
+  <joint name="j6" type="revolute">
+    <parent link="rs00_2" />
+    <child link="link3_3" />
+    <origin xyz="0 0 0" rpy="0 3.141592 3.141592" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="100" />
+  </joint>
+  <joint name="m7" type="fixed">
+    <parent link="link3_3" />
+    <child link="rs05" />
+    <origin xyz="0 0 -0.093" rpy="0 3.141592 1.570791" />
+  </joint>
+  <joint name="gripper_base" type="fixed">
+    <parent link="rs05" />
+    <child link="gripper" />
+    <origin xyz="0 0 0" rpy="0 3.14159 0" />
+  </joint>
+  <joint name="finger_r" type="prismatic">
+    <parent link="gripper" />
+    <child link="finger_r" />
+    <origin xyz="0 -0.06475 -0.0218" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.0447" effort="50" velocity="100" />
+  </joint>
+  <joint name="finger_l" type="prismatic">
+    <parent link="gripper" />
+    <child link="finger_l" />
+    <origin xyz="0 0.06475 -0.0218" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.05" effort="50" velocity="100" />
+    <mimic joint="finger_r" multiplier="1.0" offset="0" />
+  </joint>
+</robot>

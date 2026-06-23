@@ -1,0 +1,217 @@
+seed: 42
+output_dir: "outputs_legacy_gru_mlp"
+stage_output_dirs: true
+experiment_stage: "easy_hold"
+
+robot:
+  urdf_path: "../src/sim/urdf/robot.urdf"
+  dof: 6
+  joint_names: ["j1", "j2", "j3", "j4", "j5", "j6"]
+  real_csv_joint_order: ["j1", "j2", "j3", "j4", "j5", "j6"]
+  motor_joint_map:
+    "1": "j1"
+    "2": "j2"
+    "3": "j3"
+    "4": "j4"
+    "5": "j5"
+    "6": "j6"
+  use_pinocchio: true
+
+simulation:
+  dt: 0.002
+  episode_duration: 10.0
+  num_train_episodes: 100
+  num_val_episodes: 20
+  num_test_episodes: 20
+  modes: ["hold"]
+  kp: [20.0, 20.0, 15.0, 10.0, 8.0, 5.0]
+  kd: [2.0, 2.0, 1.5, 1.0, 0.8, 0.5]
+  torque_limit: [6.0, 20.0, 10.0, 6.0, 6.0, 6.0]
+  safe_joint_range:
+    - [-2.4, 2.4]
+    - [-1.2, 1.2]
+    - [-2.4, 2.4]
+    - [-2.4, 2.4]
+    - [-2.4, 2.4]
+    - [-2.4, 2.4]
+  hold_position_range: [-0.8, 0.8]
+  sine_amplitude_range: [0.05, 0.25]
+  sine_frequency_range: [0.05, 0.30]
+  disturbance_label_eps: 1.0e-6
+
+disturbance:
+  type: "joint_torque"
+  num_events_per_episode: [2, 4]
+  magnitude_range: [1.0, 3.0]
+  duration_range: [0.8, 1.5]
+  affected_joints: [0, 1, 2, 3, 4, 5]
+  contact_frames: ["ee_link"]
+  force_range: [3.0, 12.0]
+  body_torque_range: [0.0, 0.0]
+
+domain_randomization:
+  enabled: false
+  damping_range: [0.0, 0.0]
+  viscous_friction_range: [0.0, 0.0]
+  coulomb_friction_range: [0.0, 0.0]
+  q_noise_std: 0.0
+  qdot_noise_std: 0.0
+  torque_scale_range: [1.0, 1.0]
+  control_delay_steps_range: [0, 0]
+
+dataset:
+  window_length: 30
+  stride: 1
+  use_delta_features: true
+  feature_mode: "original_42"
+
+threshold:
+  metric: "combined"
+  alpha: 1.0
+  beta: 2.0
+
+training:
+  device: "auto"
+  optimizer: "adam"
+  batch_size: 256
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.0
+  hidden_dim: 64
+  num_layers: 1
+  dropout: 0.1
+
+  # MLP는 legacy GRU 조건에 단순 추가하는 single-step baseline이다.
+  mlp_hidden_dim: 64
+  mlp_num_layers: 2
+  mlp_dropout: 0.1
+  mlp_optimizer: "adam"
+  mlp_lr: 0.001
+  mlp_weight_decay: 0.0
+  mlp_decision_threshold: null
+
+  gru_hidden_dim: 64
+  gru_num_layers: 1
+  gru_dropout: 0.1
+  gru_optimizer: "adam"
+  gru_lr: 0.001
+  gru_weight_decay: 0.0
+  gru_decision_threshold: null
+
+  checkpoint_selection_metric: "val_f1"
+  early_stopping_patience: 8
+  early_stopping_warmup_epochs: 5
+  early_stopping_min_delta: 0.0
+  threshold_search_points: 240
+  pos_weight_override: null
+  grad_clip_norm: null
+  num_workers: 0
+
+  # MLP baseline 추가가 legacy GRU 초기화/셔플 random state를 바꾸지 않도록 한다.
+  isolate_model_random_seed: true
+  mlp_seed: null
+  gru_seed: null
+  mlp_seed_offset: 0
+  gru_seed_offset: 0
+
+  label_delay_ms: 0
+  transition_exclusion_ms: 0
+  exclude_transition_val: false
+
+  # 0.799 F1이 나온 legacy GRU checkpoint는 재학습하지 않고 그대로 재사용한다.
+  # 이 config의 목적은 legacy GRU 결과 위에 MLP baseline만 추가하는 것이다.
+  reuse_gru_checkpoint_path: "/home/eomyunbeen/idle_ws_backup/contact_detection/outputs/randomized_sim/models/gru_detector.pt"
+  reuse_gru_train_log_path: "/home/eomyunbeen/idle_ws_backup/contact_detection/outputs/randomized_sim/metrics/train_log.json"
+
+evaluation:
+  event_detection_consecutive_samples: 3
+  detection_margin_ms: 50
+  feature_response_window_pre_ms: 100
+  feature_response_window_post_ms: 200
+  feature_response_threshold_sigma: 2.0
+  torque_bins:
+    - [0.0, 0.5]
+    - [0.5, 1.0]
+    - [1.0, 1.5]
+    - [1.5, 2.5]
+
+real_inference:
+  target_dt: 0.002
+  resample_to_target_dt: true
+  qdot_smoothing_window: 3
+  residual_offset_duration_s: 2.0
+  contact_intervals:
+    - [5.0, 7.0]
+    - [12.0, 14.0]
+  allow_zero_tau_cmd: false
+  fixed_target_q_des: null
+
+stages:
+  easy_hold:
+    simulation:
+      modes: ["hold"]
+    disturbance:
+      type: "joint_torque"
+      magnitude_range: [1.0, 3.0]
+      duration_range: [0.8, 1.5]
+      num_events_per_episode: [2, 4]
+    domain_randomization:
+      enabled: false
+
+  sine_no_randomization:
+    simulation:
+      modes: ["hold", "slow_sine"]
+    disturbance:
+      type: "joint_torque"
+      magnitude_range: [0.8, 2.5]
+      duration_range: [0.5, 1.2]
+      num_events_per_episode: [2, 4]
+    domain_randomization:
+      enabled: false
+
+  randomized_sim:
+    simulation:
+      modes: ["hold", "slow_sine"]
+    disturbance:
+      type: "joint_torque"
+      magnitude_range: [0.8, 2.5]
+      duration_range: [0.5, 1.2]
+      num_events_per_episode: [2, 4]
+    domain_randomization:
+      enabled: true
+      q_noise_std: 0.001
+      qdot_noise_std: 0.005
+      torque_scale_range: [0.9, 1.1]
+      control_delay_steps_range: [0, 1]
+      damping_range: [0.01, 0.15]
+      viscous_friction_range: [0.0, 0.05]
+      coulomb_friction_range: [0.0, 0.1]
+
+  low_torque_analysis:
+    simulation:
+      modes: ["hold", "slow_sine"]
+    disturbance:
+      type: "joint_torque"
+      magnitude_range: [0.2, 1.0]
+      duration_range: [0.5, 1.2]
+      num_events_per_episode: [2, 4]
+    domain_randomization:
+      enabled: true
+      q_noise_std: 0.001
+      qdot_noise_std: 0.005
+      torque_scale_range: [0.9, 1.1]
+      control_delay_steps_range: [0, 1]
+      damping_range: [0.01, 0.15]
+      viscous_friction_range: [0.0, 0.05]
+      coulomb_friction_range: [0.0, 0.1]
+
+  small_disturbance:
+    simulation:
+      modes: ["hold", "slow_sine"]
+    disturbance:
+      type: "joint_torque"
+      magnitude_range: [0.2, 0.8]
+      duration_range: [0.3, 0.8]
+      num_events_per_episode: [1, 3]
+    domain_randomization:
+      enabled: true

@@ -1,0 +1,37 @@
+inherits: "config.yaml"
+
+# Recall-prioritized GRU experiment.
+#
+# This config intentionally writes to outputs_recall/<stage>/ so the previous
+# randomized_sim model/results in outputs/<stage>/ are preserved.  The dataset
+# generation settings are inherited from config.yaml; only the training
+# operating-point policy is changed.
+output_dir: "outputs_recall"
+
+training:
+  # Larger positive weight makes false negatives more expensive during BCE
+  # training.  Sweep candidates such as 4, 6, 8, 10 if this first run is not
+  # sensitive enough.
+  pos_weight_override: 6.0
+
+  # Select the probability threshold on the validation set by requiring a
+  # minimum recall, then maximizing F1 among thresholds that satisfy it.
+  # This directly matches the "missed contacts are more important" objective
+  # while avoiding the trivial always-contact detector.
+  threshold_selection_policy: "recall_constrained_f1"
+  target_recall: 0.85
+  fbeta_beta: 2.0
+
+  # Keep the rest of the network and optimizer comparable to the original run.
+  device: "auto"
+  batch_size: 256
+  epochs: 50
+  lr: 0.001
+  hidden_dim: 64
+  num_layers: 1
+  dropout: 0.1
+  early_stopping_patience: 8
+  early_stopping_warmup_epochs: 5
+  threshold_search_points: 240
+  gru_decision_threshold: null
+  num_workers: 0

@@ -1,0 +1,3 @@
+geometry_msgs/PoseStamped pose
+float32 duration_override_s
+bool use_safe_transit

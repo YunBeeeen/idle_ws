@@ -1,0 +1,26 @@
+episode_id,type,description,csv_path,label,notes
+slow_sine_j2_001,slow_joint,j2 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j2_001.csv,nc,no human contact
+slow_sine_j3_001,slow_joint,j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_001.csv,nc,no human contact
+slow_sine_j3_near_current_001,slow_joint,j3 slow sine near current posture,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_near_current_001.csv,nc,no human contact
+slow_sine_j23_001,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_001.csv,nc,no human contact
+slow_sine_j23_002,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_002.csv,nc,no human contact
+no_contact_home_bridge_hold_001,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_001.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_002,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_002.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_003,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_003.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_004,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_004.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_005,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_005.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_006,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_006.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_007,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_007.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+no_contact_home_bridge_hold_008,home_bridge_hold,no contact during can_bridge home PD hold,contact_detection/real_logs/no_contact/20260619/no_contact_home_bridge_hold_008.csv,nc,can_bridge internal home policy; tau_ff=0; no human contact
+slow_sine_j2_002,slow_joint,j2 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j2_002.csv,nc,no human contact
+slow_sine_j2_003,slow_joint,j2 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j2_003.csv,nc,no human contact
+slow_sine_j2_004,slow_joint,j2 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j2_004.csv,nc,no human contact
+slow_sine_j2_005,slow_joint,j2 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j2_005.csv,nc,no human contact
+slow_sine_j3_002,slow_joint,j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_002.csv,nc,no human contact
+slow_sine_j3_003,slow_joint,j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_003.csv,nc,no human contact
+slow_sine_j3_004,slow_joint,j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_004.csv,nc,no human contact
+slow_sine_j3_005,slow_joint,j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j3_005.csv,nc,no human contact
+slow_sine_j23_003,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_003.csv,nc,no human contact
+slow_sine_j23_004,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_004.csv,nc,no human contact
+slow_sine_j23_005,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_005.csv,nc,no human contact
+slow_sine_j23_006,slow_joint,j2+j3 slow sine,contact_detection/real_logs/no_contact/20260619/slow_sine_j23_006.csv,nc,no human contact

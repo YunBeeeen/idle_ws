@@ -1,0 +1,25 @@
+# Low-frequency Type18 driver parameters (manual edit, explicit apply only).
+version: 1
+description: Type18 driver parameters. Edit manually, then run apply_driver_params.py.
+motors:
+  "1":
+    run_mode: 0
+    EPScan_time: 2
+  "2":
+    run_mode: 0
+    EPScan_time: 2
+  "3":
+    run_mode: 0
+    EPScan_time: 2
+  "4":
+    run_mode: 0
+    EPScan_time: 2
+  "5":
+    run_mode: 0
+    EPScan_time: 2
+  "6":
+    run_mode: 0
+    EPScan_time: 2
+  "7":
+    run_mode: 0
+    EPScan_time: 2

@@ -1,0 +1,46 @@
+ee_xyz_trajectory_node:
+  ros__parameters:
+    control_hz: 250.0
+    state_timeout_s: 0.2
+
+    # Full-arm IK for task-space target tracking. Gripper motor is excluded.
+    controlled_motor_ids_json: "[1,2,3,4,5,6]"
+    target_frame: gripper
+    target_offset_xyz_json: "[0.0,0.0,0.0]"
+
+    # Safety limits applied on top of URDF limits.
+    max_abs_joint_rad: 3.141592653589793
+    joint_limit_override_by_motor_json: '{"2": [-1.57, 1.57]}'
+    max_joint_jump_rad: 0.75
+    enable_cartesian_target_splitting: true
+    max_cartesian_step_m: 0.05
+    max_queued_goals: 128
+
+    # Conservative initial target tracking gains. Real robot tuning can override
+    # these via idle_common/control_tuning if use_tuning_gains style code is added.
+    kp: 1.0
+    kd: 0.05
+    min_traj_duration: 0.5
+    v_max: 0.5
+    a_max: 1.0
+
+    max_ik_residual_accept_m: 0.005
+    ik_random_restarts: 24
+    ik_seed_default_span: 3.141592653589793
+    ik_max_iterations: 220
+    ik_tolerance: 0.00001
+    ik_damping: 0.000001
+    ik_step_scale: 1.0
+
+    move_service_name: /move_to_xyz
+    target_topic: /ee_target_xyz
+    target_point_topic: /ee_target_point
+    enable_terminal_input: true
+    input_prompt: "target xyz> "
+
+    # j6 torque debug: warn if command torque is close to +/- limit or flips sign
+    # near the limit. This helps identify torque-limit clipping vs real dynamics.
+    debug_torque_motor_ids_json: "[6]"
+    torque_debug_log_period_s: 0.5
+    torque_saturation_warn_ratio: 0.95
+    torque_sign_flip_warn_threshold_nm: 4.0

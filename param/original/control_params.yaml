@@ -1,0 +1,21 @@
+# Baseline control tuning defaults and per-motor overrides.
+version: 1
+scan:
+  min_id: 1
+  max_id: 10
+defaults:
+  kp: 0.0
+  kd: 0.0
+  q_des: 0.0
+  qd_des: 0.0
+  tau_ff: 0.0
+  gravity_scale: 1.0
+  gravity_bias: 0.0
+motors:
+  "1": {}
+  "2": {}
+  "3": {}
+  "4": {}
+  "5": {}
+  "6": {}
+  "7": {}

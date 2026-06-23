@@ -1,0 +1,48 @@
+dataset_ik_motion_node:
+  ros__parameters:
+    # Dataset free-motion command generator.
+    # Use this node with either real CAN bridge or a separately launched viewer.
+    control_hz: 100.0
+    state_timeout_s: 0.2
+
+    start_all_motors_at_zero: true
+    initial_to_zero_duration_s: 10.0
+    segment_duration_s: 8.0
+    repeat: false
+
+    kp: 4.0
+    kd: 0.8
+    hold_kp: 3.0
+    hold_kd: 0.5
+    use_tuning_gains: false
+
+    # Full-arm DLS IK uses the j1~j6 Jacobian.  The gripper motor is excluded.
+    controlled_motor_ids_json: [1, 2, 3, 4, 5, 6]
+    # Require visible gross-arm motion; wrist joints may move as needed by IK.
+    require_motion_motor_ids_json: [1, 2, 3]
+    goal_sampling_mode: joint_fk
+    target_frame: gripper
+    target_offset_xyz_json: "[0.0, 0.0, 0.0]"
+
+    random_seed: 11
+    random_waypoint_count: 12
+    max_generation_attempts: 3000
+    workspace_center_q_by_motor_json: '{"1": 0.0, "2": -0.70, "3": -1.20, "4": 0.0, "5": 0.0, "6": 0.0}'
+    workspace_delta_xyz_json: "[0.06, 0.08, 0.05]"
+    workspace_bias_xyz_json: "[0.0, 0.0, 0.0]"
+    joint_sample_delta_by_motor_json: '{"1": 0.24, "2": 0.20, "3": 0.24, "4": 0.10, "5": 0.08, "6": 0.08}'
+
+    v_max: 0.35
+    a_max: 0.70
+    max_abs_joint_rad: 3.141592653589793
+    enforce_zero_crossing: true
+    zero_crossing_epsilon_rad: 0.0001
+    check_self_collision: true
+    check_gravity_load: true
+    collision_samples_per_segment: 16
+
+    max_ik_residual_accept_m: 0.010
+    ik_random_restarts: 32
+    ik_seed_default_span: 3.141592653589793
+    max_joint_jump_rad: 0.75
+    min_joint_step_norm_rad: 0.08

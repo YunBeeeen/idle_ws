@@ -1,0 +1,24 @@
+motors:
+  '1':
+    kd: 0.12
+    kp: 3.0
+  '2':
+    gravity_bias: 0.0
+    gravity_scale: 0.95
+    kd: 0.7
+    kp: 9.0
+  '3':
+    gravity_bias: 0.0
+    gravity_scale: 0.90
+    kd: 0.7
+    kp: 6.0
+  '4':
+    kd: 0.4
+    kp: 5.0
+  '5':
+    kd: 0.3
+    kp: 3.0
+  '6':
+    kd: 0.2
+    kp: 2.0
+version: 1

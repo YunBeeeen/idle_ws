@@ -1,0 +1,89 @@
+# =========================
+# ROS 2 / colcon workspace
+# =========================
+build/
+install/
+log/
+.colcon/
+.colcon_command_history
+.colcon_ignore
+compile_commands.json
+
+# ROS bags / logs
+rosbag2_*/
+*.db3
+*.mcap
+*.log
+*.LOG
+MUJOCO_LOG.TXT
+
+# ML datasets / generated experiment outputs
+contact_detection/outputs*/
+
+# Local backup snapshots
+*.pre_rename_*/
+*.backup_*/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build_python/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# =========================
+# C / C++
+# =========================
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.tmp
+*.swp
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# OS / Misc
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Optional: local configs / secrets (필요시 켜기)
+# =========================
+# *.env
+# .env
+# **/secrets.*
+# **/*token*

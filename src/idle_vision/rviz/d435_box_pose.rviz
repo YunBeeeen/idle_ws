@@ -1,0 +1,110 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Help Height: 0
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Color Image1
+        - /Aligned Depth1
+        - /Box Debug Image1
+        - /Box Pose Markers1
+      Splitter Ratio: 0.5
+    Tree Height: 550
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Plane: XY
+      Plane Cell Count: 10
+      Cell Size: 0.1
+      Color: 160; 160; 164
+      Alpha: 0.35
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Axes: true
+      Show Names: true
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: Color Image
+      Enabled: true
+      Topic:
+        Value: /camera/camera/color/image_raw
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Transport Hint: raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: Aligned Depth
+      Enabled: true
+      Topic:
+        Value: /camera/camera/aligned_depth_to_color/image_raw
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Transport Hint: raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: Box Debug Image
+      Enabled: true
+      Topic:
+        Value: /idle_vision/box_pose/debug_image
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+      Transport Hint: raw
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Box Pose Markers
+      Enabled: true
+      Marker Topic:
+        Value: /idle_vision/box_pose/markers
+      Namespaces:
+        box_centers: true
+        box_yaw: true
+        box_labels: true
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 1.6
+      Pitch: -0.7
+      Yaw: 0.7
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0.6
+      Target Frame: base
+    Saved: ~
+Window Geometry:
+  Height: 1000
+  Width: 1600
+  X: 80
+  Y: 40

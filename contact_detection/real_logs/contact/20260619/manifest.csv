@@ -1,0 +1,40 @@
+episode_id,type,description,csv_path,label,contact_intervals,notes
+contact_ee_static_hold_001,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_001.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_002,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_002.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_003,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_003.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_004,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_004.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_005,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_005.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_006,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_006.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_007,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_007.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_008,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_008.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_008,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_008.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_009,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_009.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_static_hold_010,contact,ee gentle push during static hold,contact_detection/real_logs/contact/20260619/contact_ee_static_hold_010.csv,pc,"[[5.0,9.0]]",manual interval from recorder timer
+contact_ee_home_bridge_hold_001,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_001.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_002,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_002.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_003,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_003.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_004,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_004.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_005,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_005.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_006,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_006.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_007,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_007.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_008,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_008.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_009,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_009.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_home_bridge_hold_010,contact,ee push during can_bridge home PD hold,contact_detection/real_logs/contact/20260619/contact_ee_home_bridge_hold_010.csv,pc,"[[5.0,9.0]]",can_bridge internal home policy; tau_ff=0; manual interval
+contact_ee_slow_sine_j2_001,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_001.csv,pc,"[[5.0,9.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j2_002,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_002.csv,pc,"[[5.0,9.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_001,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_001.csv,pc,"[[5.0,9.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_002,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_002.csv,pc,"[[5.0,9.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_001,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_001.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_002,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_002.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_003,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_003.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_004,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_004.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_005,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_005.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j23_006,contact,ee push during j2+j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j23_006.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j2_003,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_003.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j2_004,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_004.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j2_005,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_005.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j2_006,contact,ee push during j2 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j2_006.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_003,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_003.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_004,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_004.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_005,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_005.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval
+contact_ee_slow_sine_j3_006,contact,ee push during j3 slow sine,contact_detection/real_logs/contact/20260619/contact_ee_slow_sine_j3_006.csv,pc,"[[5.0,13.0]]",slow sine contact; manual interval

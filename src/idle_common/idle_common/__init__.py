@@ -1,0 +1,1 @@
+"""Shared idle workspace helpers."""

@@ -1,0 +1,15 @@
+# Core scientific stack
+numpy>=1.24
+PyYAML>=6.0
+matplotlib>=3.7
+
+# Optional hyperparameter tuning. tune_detectors.py falls back to validation-only
+# random search when Optuna is not installed.
+# optuna>=3.6
+
+# PyTorch is installed separately so you can choose CPU-only or CUDA wheels for
+# your machine. The scripts use CUDA automatically when torch.cuda.is_available().
+
+# Optional but recommended for URDF-based nominal dynamics.
+# Pinocchio packaging differs by platform; install the package that provides
+# `import pinocchio` in your environment if it is not already available.
